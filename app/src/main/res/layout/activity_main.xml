@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGroundForm"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/vv_logo" />
+
+    <Button
+        android:id="@+id/btRegistros"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@color/backGroundBtn"
+        android:onClick="clkRegisters"
+        android:text="@string/registros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/backGroundBtn"
+        android:onClick="clkValidar"
+        android:text="@string/registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toEndOf="@+id/tvInformacion"
+        app:layout_constraintTop_toBottomOf="@+id/btRegistros"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvInformacion"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="22dp"
+        android:foregroundTint="@color/black"
+        android:text="@string/informacion"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:autofillHints="@string/modelo"
+        android:hint="@string/modelo"
+        android:inputType="textPersonName"
+        android:maxLength="50"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInformacion"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <EditText
+        android:id="@+id/etROM"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/rom"
+        android:autofillHints="@string/rom"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spMarca"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <EditText
+        android:id="@+id/etRAM"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/ram"
+        android:autofillHints="@string/ram"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/etROM"
+        app:layout_constraintTop_toBottomOf="@+id/spMarca"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <Spinner
+        android:id="@+id/spMarca"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:entries="@array/Marca"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etModelo"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Spinner
+        android:id="@+id/spSO"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="102dp"
+        android:entries="@array/SO"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spMarca"
+        app:layout_constraintVertical_bias="0.22" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

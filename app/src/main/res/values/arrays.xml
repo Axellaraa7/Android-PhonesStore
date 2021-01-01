@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Marca">
+        <item>@string/marca</item>
+        <item>@string/Xiaomi</item>
+        <item>@string/Apple</item>
+        <item>@string/Samsung</item>
+        <item>@string/Huawei</item>
+        <item>@string/HTC</item>
+        <item>@string/Motorola</item>
+    </string-array>
+
+    <string-array name="SO">
+        <item>@string/so</item>
+        <item>@string/once</item>
+        <item>@string/diez</item>
+        <item>@string/pie</item>
+        <item>@string/oreo</item>
+        <item>@string/nougat</item>
+        <item>@string/marsh</item>
+        <item>@string/lollipop</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyecto_2</string>
+    <string name="bienvenida">Welcome! :)</string>
+    <string name="registros">Inventory</string>
+    <string name="registrar">Register</string>
+    <string name="informacion">Information</string>
+    <string name="modelo">Model</string>
+    <string name="marca">Brand</string>
+    <string name="rom">Memory</string>
+    <string name="ram">RAM Capacity</string>
+    <string name="so">Operative System</string>
+    <string name="Xiaomi">Xiaomi</string>
+    <string name="Apple">Nokia</string>
+    <string name="Samsung">Samsung</string>
+    <string name="Huawei">Huawei</string>
+    <string name="HTC">HTC</string>
+    <string name="Motorola">Motorola</string>
+    <string name="once">11.0</string>
+    <string name="diez">10.0</string>
+    <string name="pie">Pie 9.0</string>
+    <string name="oreo">Oreo 8.0</string>
+    <string name="nougat">Nougat 7.0</string>
+    <string name="marsh">Marshmallow 6.0</string>
+    <string name="lollipop">Lollipop 5.0</string>
+    <string name="errModel">"Please type the model "</string>
+    <string name="errBrand">Pleas select a brand</string>
+    <string name="errSO">Please select an Operative System</string>
+    <string name="errGral">Please fill the missing blanks</string>
+    <string name="valRam">Please type a capacity of 2,3,4,6,8 or 12 GB</string>
+    <string name="valRom">Please type a capacity of 32,64,128,256 or 512 GB</string>
+    <string name="errRom">Please type the capacity of the memory</string>
+    <string name="errRam">Please type the capacity of the RAM memory</string>
+    <string name="noObject">No objects inserted</string>
+</resources>
