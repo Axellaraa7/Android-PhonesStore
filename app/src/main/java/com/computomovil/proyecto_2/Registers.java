@@ -33,15 +33,8 @@ public class Registers extends AppCompatActivity {
         lvRegistros=findViewById(R.id.lvRegistros);
         celulares=(ArrayList<Celular>)getIntent().getSerializableExtra("celulares");
 
-        if(celulares.size()==0){
-            Toast.makeText(this,getResources().getString(R.string.noObject),Toast.LENGTH_SHORT).show();
-        }else{
-            AdapterCel adapter=new AdapterCel(this,celulares);
-            /*for(int i=0;i<celulares.size();i++){
-                Toast.makeText(this,adapter.getCount()+"",Toast.LENGTH_SHORT).show();
-            }*/
-            lvRegistros.setAdapter(adapter);
-        }
+        AdapterCel adapter=new AdapterCel(this,celulares);
+        lvRegistros.setAdapter(adapter);
 
         lvRegistros.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

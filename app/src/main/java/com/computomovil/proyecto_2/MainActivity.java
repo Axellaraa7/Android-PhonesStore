@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etModelo,etRom,etRam;
     Spinner spMarca,spSO;
-    ArrayList<Celular>celulares=new ArrayList<>();
+    ArrayList<Celular>celulares;
     Intent registro;
-    long id=1;
+    long id;
 
 
     @Override
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        loadSP();
         etModelo=findViewById(R.id.etModelo);
         etRom=findViewById(R.id.etROM);
         etRam=findViewById(R.id.etRAM);
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             id++;
             celulares.add(celular);
             eraseElements();
+            Toast.makeText(this,"Objeto guardado",Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(this,getResources().getString(R.string.errGral),Toast.LENGTH_SHORT).show();
             if(!missingField(etModelo)) etModelo.setError(getResources().getString(R.string.errModel));
@@ -75,9 +77,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clkRegisters(View view){
-        registro=new Intent(MainActivity.this,Registers.class);
-        registro.putExtra("celulares",celulares);
-        startActivity(registro);
+        if(celulares.size()==0){
+            Toast.makeText(this,getResources().getString(R.string.noObject),Toast.LENGTH_SHORT).show();
+        }else{
+            registro=new Intent(MainActivity.this,Registers.class);
+            registro.putExtra("celulares",celulares);
+            saveSP();
+            startActivity(registro);
+        }
     }
 
     private boolean missingField(EditText et){
@@ -128,6 +135,28 @@ public class MainActivity extends AppCompatActivity {
                 return R.drawable.motorola_logo;
             default:
                 return R.drawable.ic_baseline_close_24;
+        }
+    }
+
+    private void saveSP(){
+        SharedPreferences sp=getSharedPreferences(getResources().getString(R.string.celulares), MODE_PRIVATE);
+        SharedPreferences.Editor edit=sp.edit();
+        Gson gson=new Gson();
+        String jSon=gson.toJson(celulares);
+        edit.putString(getResources().getString(R.string.celulares),jSon);
+        edit.apply();
+    }
+
+    private void loadSP(){
+        SharedPreferences sp=getSharedPreferences(getResources().getString(R.string.celulares),MODE_PRIVATE);
+        Gson gson=new Gson();
+        String jSon=sp.getString(getResources().getString(R.string.celulares),null);
+        Type type=new TypeToken<ArrayList<Celular>>(){}.getType();
+        celulares=gson.fromJson(jSon,type);
+        if(celulares!=null) id=celulares.size()+getResources().getInteger(R.integer.uno);
+        else{
+            celulares=new ArrayList<>();
+            id=getResources().getInteger(R.integer.uno);
         }
     }
 }
