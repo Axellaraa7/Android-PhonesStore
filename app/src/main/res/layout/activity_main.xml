@@ -22,7 +22,6 @@
 
     <Button
         android:id="@+id/btRegistros"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="180dp"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
