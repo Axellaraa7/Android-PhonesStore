@@ -10,6 +10,7 @@
     <string name="home" translatable="false">HOME</string>
     <string name="toastID" translatable="false">ID: </string>
     <string name="celulares" translatable="false">celulares</string>
+    <string name="saved">Producto guardado</string>
     <!--Formulario-->
     <string name="registros">Registros</string>
     <string name="registrar">Registrar</string>

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             id++;
             celulares.add(celular);
             eraseElements();
-            Toast.makeText(this,"Objeto guardado",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getResources().getString(R.string.saved),Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(this,getResources().getString(R.string.errGral),Toast.LENGTH_SHORT).show();
             if(!missingField(etModelo)) etModelo.setError(getResources().getString(R.string.errModel));

@@ -24,7 +24,7 @@
     <string name="marsh">Marshmallow 6.0</string>
     <string name="lollipop">Lollipop 5.0</string>
     <string name="errModel">"Please type the model "</string>
-    <string name="errBrand">Pleas select a brand</string>
+    <string name="errBrand">Please select a brand</string>
     <string name="errSO">Please select an Operative System</string>
     <string name="errGral">Please fill the missing blanks</string>
     <string name="valRam">Please type a capacity of 2,3,4,6,8 or 12 GB</string>
@@ -32,4 +32,5 @@
     <string name="errRom">Please type the capacity of the memory</string>
     <string name="errRam">Please type the capacity of the RAM memory</string>
     <string name="noObject">No objects inserted</string>
+    <string name="saved">Product saved</string>
 </resources>
